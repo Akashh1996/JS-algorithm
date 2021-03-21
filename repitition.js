@@ -1,14 +1,8 @@
-const array = [1,2,1,3,4,5]
+const array = [1,2,1,3,4,5, 8]
 
 function countRepeated(array) {
     let char = {}
-    for(let i of array){
-        if(!char[i]){
-            char[i] = 1
-        }else{
-            char[i]++
-        }
-    }
+    array.map((num)=>  char[num] ? char[num] ++ : char[num] = 1)  
     return char
 }
 
