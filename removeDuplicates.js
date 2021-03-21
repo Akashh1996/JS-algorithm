@@ -1,10 +1,10 @@
-const numbers = [1,2,1,2,3,5]
+const numbers = [1,2,1,2,3,5,1]
 
-function removeDuplicate(num) {
+const removeDuplicate = (num) => {
    return num.filter((n, index)=> num.indexOf(n) === index)
 }
 
-function removeDuplicate1(array) {
+const removeDuplicate1 = (array) => {
    let newArray = []
    array.map(element => {
       if(!newArray.includes(element)){
@@ -14,7 +14,7 @@ function removeDuplicate1(array) {
    return newArray
 }
 
-function removeDuplicate2(array) {
+const removeDuplicate2 = (array) => {
    let newArray = []
    array.map((element)=>{
       if(newArray.indexOf(element) === -1){
@@ -24,4 +24,4 @@ function removeDuplicate2(array) {
    return newArray
 
 }
-console.log(removeDuplicate2(numbers))
+console.log(removeDuplicate(numbers))
